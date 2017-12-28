@@ -1,1 +1,5 @@
-111
+node_modules
+dist
+coverage
+.idea
+.DS_Store
