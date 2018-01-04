@@ -1,6 +1,10 @@
 import React, {Component} from 'react';
-import { Form, Icon, Input, Button } from 'antd';
+import { Form, Input, Select, Radio, Checkbox, Row, Col, DatePicker } from 'antd';
 const FormItem = Form.Item;
+const Option = Select.Option;
+const RadioGroup = Radio.Group;
+const CheckboxGroup = Checkbox.Group;
+const { MonthPicker, RangePicker, WeekPicker } = DatePicker;
 
 function hasErrors(fieldsError) {
     return Object.keys(fieldsError).some(field => fieldsError[field]);
@@ -8,53 +12,52 @@ function hasErrors(fieldsError) {
 
 class basicForm extends Component {
     componentDidMount() {
-        // To disabled submit button at the beginning.
-        this.props.form.validateFields();
+
     }
-    handleSubmit = (e) => {
-        e.preventDefault();
-        this.props.form.validateFields((err, values) => {
-            if (!err) {
-                console.log('Received values of form: ', values);
-            }
-        });
-    }
+
     render() {
         const { getFieldDecorator, getFieldsError, getFieldError, isFieldTouched } = this.props.form;
 
-        // Only show error after a field is touched.
-        const userNameError = isFieldTouched('userName') && getFieldError('userName');
-        const passwordError = isFieldTouched('password') && getFieldError('password');
         return (
-            <Form layout="inline" onSubmit={this.handleSubmit}>
-                <FormItem
-                    validateStatus={userNameError ? 'error' : ''}
-                    help={userNameError || ''}
-                >
-                    {getFieldDecorator('userName', {
-                        rules: [{ required: true, message: 'Please input your username!' }],
-                    })(
-                        <Input prefix={<Icon type="user" style={{ color: 'rgba(0,0,0,.25)' }} />} placeholder="Username" />
-                    )}
+            <Form style={{width:20+'%'}}>
+                <FormItem label="姓名">
+                    <Input/>
                 </FormItem>
-                <FormItem
-                    validateStatus={passwordError ? 'error' : ''}
-                    help={passwordError || ''}
-                >
-                    {getFieldDecorator('password', {
-                        rules: [{ required: true, message: 'Please input your Password!' }],
-                    })(
-                        <Input prefix={<Icon type="lock" style={{ color: 'rgba(0,0,0,.25)' }} />} type="password" placeholder="Password" />
-                    )}
+                <FormItem label="性别">
+                    <RadioGroup>
+                        <Radio value={1}>男</Radio>
+                        <Radio value={2}>女</Radio>
+                    </RadioGroup>
                 </FormItem>
-                <FormItem>
-                    <Button
-                        type="primary"
-                        htmlType="submit"
-                        disabled={hasErrors(getFieldsError())}
-                    >
-                        Log in
-                    </Button>
+                <FormItem label="学历">
+                    <Select>
+                        <Option value="1">初中</Option>
+                        <Option value="2">高中</Option>
+                        <Option value="3">本科</Option>
+                        <Option value="4">研究生</Option>
+                        <Option value="5">博士</Option>
+                    </Select>
+                </FormItem>
+                <FormItem label="兴趣爱好">
+                    <Checkbox.Group style={{ width: '100%' }}>
+                        <Row>
+                            <Col span={8}><Checkbox value="1">篮球</Checkbox></Col>
+                            <Col span={8}><Checkbox value="2">足球</Checkbox></Col>
+                            <Col span={8}><Checkbox value="3">乒乓球</Checkbox></Col>
+                        </Row>
+                    </Checkbox.Group>
+                </FormItem>
+                <FormItem label="日期选择">
+                    <DatePicker placeholder="点击选择"></DatePicker>
+                </FormItem>
+                <FormItem label="月份选择">
+                    <MonthPicker placeholder="点击选择"></MonthPicker>
+                </FormItem>
+                <FormItem label="周选择">
+                    <WeekPicker placeholder="点击选择"></WeekPicker>
+                </FormItem>
+                <FormItem label="日期范围">
+                    <RangePicker placeholder={['开始日期','结束日期']}></RangePicker>
                 </FormItem>
             </Form>
         );
