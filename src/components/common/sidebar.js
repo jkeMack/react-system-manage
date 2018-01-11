@@ -42,8 +42,8 @@ export class Sidebar extends Component {
                     </Menu.Item>
                     <SubMenu key="sub1" title={<span><Icon type="mail"/><span>表单</span></span>}>
                         <Menu.Item key="5"><Link to='/form'>基本表单</Link></Menu.Item>
-                        <Menu.Item key="6">编辑器</Menu.Item>
-                        <Menu.Item key="7">markdown</Menu.Item>
+                        <Menu.Item key="6"><Link to="/editor">编辑器</Link></Menu.Item>
+                        <Menu.Item key="7"><Link to="/markdown">markdown</Link></Menu.Item>
                         <Menu.Item key="8"><Link to='/upload'>文件上传</Link></Menu.Item>
                     </SubMenu>
                 </Menu>
