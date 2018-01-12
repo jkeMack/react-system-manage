@@ -7,6 +7,7 @@
     "moment": "^2.20.1",
     "react": "~15.3.1",
     "react-dom": "~15.3.1",
+    "react-dragula": "^1.1.17",
     "react-lz-editor": "^0.11.9",
     "react-markdown": "^3.1.4",
     "react-router": "^2.7.0",

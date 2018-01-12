@@ -37,8 +37,10 @@ export class Sidebar extends Component {
                         <span>图表</span>
                     </Menu.Item>
                     <Menu.Item key="3">
-                        <Icon type="inbox"/>
-                        <span>拖拽</span>
+                        <Link to="/dragula">
+                            <Icon type="inbox"/>
+                            <span>拖拽</span>
+                        </Link>
                     </Menu.Item>
                     <SubMenu key="sub1" title={<span><Icon type="mail"/><span>表单</span></span>}>
                         <Menu.Item key="5"><Link to='/form'>基本表单</Link></Menu.Item>
