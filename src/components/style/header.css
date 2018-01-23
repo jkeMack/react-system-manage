@@ -4,3 +4,9 @@
     background-color: #1890ff;
     line-height: 50px;
 }
+
+.header .avatar{
+    position: absolute;
+    right: 220px;
+    top: 9px;
+}

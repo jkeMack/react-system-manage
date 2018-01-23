@@ -16,8 +16,8 @@ import 'moment/locale/zh-cn';
 moment.locale('zh-cn');
 
 ReactDOM.render(<Router>
+    <Route path="/login" component={Login}/>
     <Route path="/" component={App}>
-        <Route path="login" component={Login}/>
         <Route path="table" component={BasicTable}/>
         <Route path="form" component={BasicForm}/>
         <Route path="upload" component={BasicUpload}/>
