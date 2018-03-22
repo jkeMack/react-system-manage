@@ -1,0 +1,22 @@
+.crud .grid-title{
+    font-size: 20px;
+}
+
+.crud .buttons {
+    text-align: right;
+    margin-bottom: 20px;
+}
+.crud .buttons .filter{
+    float:left;
+}
+.crud .buttons .filter > button:not(:last-child) {
+    margin-right: 10px;
+}
+
+.crud .buttons > button:not(:last-child) {
+    margin-right: 10px;
+}
+
+.crud .ant-table-thead th{
+    background-color: #f5f5f5;
+}

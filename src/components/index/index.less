@@ -1,0 +1,109 @@
+.home-index {
+
+  position: relative;
+
+  .map-container {
+    height: calc(100vh - 120px) !important;
+  }
+
+  .panel {
+    z-index: 100;
+    width: 300px;
+    min-height: 300px;
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    background: black;
+    opacity: 0.7;
+    padding: 20px;
+    line-height: 40px;
+    border-radius: 5px;
+
+    .panel-header {
+      border-bottom: 1px solid #ccc;
+      position: relative;
+      //关闭按钮
+      .close {
+        position: absolute;
+        right: 0;
+        font-size: 20px;
+        font-weight: bold;
+        cursor: pointer;
+      }
+    }
+
+    .panel-body {
+      .has-info {
+        position: relative;
+        .right-icon {
+          position: absolute;
+          top: 0;
+          right: 0;
+          cursor: pointer;
+        }
+      }
+    }
+
+    .panel-footer {
+      border-top: 1px solid #ccc;
+      margin-top: 20px;
+      color: #89f168;
+      cursor: pointer;
+    }
+
+  }
+
+  .info-panel {
+    z-index: 100;
+    width: 500px;
+    min-height: 300px;
+    position: absolute;
+    left: calc(20% + 310px);
+    top: calc(50% + 80px);
+    background: black;
+    opacity: 0.7;
+    padding: 20px;
+    line-height: 40px;
+    border-radius: 5px;
+
+    .caret-left {
+      position: absolute;
+      font-size: 20px;
+      left: -10px;
+      color: black;
+    }
+
+    .close {
+      position: absolute;
+      right: 10px;
+      top: 0;
+      font-size: 20px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .title {
+      border-bottom: 1px solid #ccc;
+    }
+  }
+
+  .chart-container{
+    width: 400px;
+    height: calc(100vh - 140px);
+    position: absolute;
+    top: 20px;
+    right: 20px;
+
+    >div{
+      background: black;
+      opacity: 0.8;
+      border-radius: 5px;
+      width: 400px;
+      height: 32%;
+      margin-bottom: 2%;
+      :last-child{
+        margin-bottom: 0;
+      }
+    }
+  }
+}

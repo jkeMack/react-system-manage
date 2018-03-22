@@ -1,19 +1,19 @@
-import './App.css';
-import React, {Component} from 'react';
-import {Header} from './components/common/header';
-import {Sidebar} from './components/common/sidebar';
+import React, { Component } from 'react';
+import zhCN from 'antd/lib/locale-provider/zh_CN';
+import { LocaleProvider } from 'antd';
+// import 'antd/dist/antd.css';
+import Router from './router';
+import './App.less';
 
 class App extends Component {
+
     render() {
         return (
-            <div className="app">
-                <Header></Header>
-                <Sidebar></Sidebar>
-                <div className="container">{this.props.children}</div>
-            </div>
+            <LocaleProvider locale={zhCN}>
+                <Router />
+            </LocaleProvider>
         );
     }
 }
 
 export default App;
-
