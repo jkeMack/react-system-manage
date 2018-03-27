@@ -19,7 +19,7 @@ export class Index extends Component {
 
         chart1.setOption({
             title:{
-                text:'站点状态统计比例',
+                text:'数据一统计比例',
                 top:'20',
                 left:'20',
                 textStyle:{
@@ -30,7 +30,7 @@ export class Index extends Component {
             calculable: true,
             series: [
                 {
-                    name: '站点状态统计比例',
+                    name: '数据一统计比例',
                     type: 'pie',
                     radius: ['40%', '60%'],
                     itemStyle: {
@@ -50,7 +50,7 @@ export class Index extends Component {
         });
         chart2.setOption({
             title:{
-                text:'RTU状态统计比例',
+                text:'数据二统计比例',
                 top:'20',
                 left:'20',
                 textStyle:{
@@ -61,7 +61,7 @@ export class Index extends Component {
             calculable: true,
             series: [
                 {
-                    name: 'RTU状态统计比例',
+                    name: '数据二统计比例',
                     type: 'pie',
                     radius: ['40%', '60%'],
                     itemStyle: {
@@ -81,7 +81,7 @@ export class Index extends Component {
         });
         chart3.setOption({
             title:{
-                text:'设备状态统计比例',
+                text:'数据三统计比例',
                 top:'20',
                 left:'20',
                 textStyle:{
@@ -92,7 +92,7 @@ export class Index extends Component {
             calculable: true,
             series: [
                 {
-                    name: '设备状态统计比例',
+                    name: '数据三统计比例',
                     type: 'pie',
                     radius: ['40%', '60%'],
                     itemStyle: {
@@ -143,8 +143,8 @@ export class Index extends Component {
     render() {
 
         const data = [
-            {text: '内蒙古站点', location: '98.411,42.279'},
-            {text: '成都站点', location: '105.257,30.88'},
+            {text: '坐标一', location: '98.411,42.279'},
+            {text: '坐标二', location: '105.257,30.88'},
         ];
 
         const rtuInfoPop = (
@@ -153,14 +153,14 @@ export class Index extends Component {
                 <span className="close" onClick={this.closeRtuInfo}><Icon type="close"></Icon></span>
 
                 <div className="title">
-                    RTU #1
+                    标题 #1
                 </div>
                 <div>
-                    <Tag color="magenta">机房总电源XHMFASFA</Tag>
-                    <Tag color="red">机房总电源XHMFASFA-210</Tag>
-                    <Tag color="volcano">机房总电源XHMFASFA-315</Tag>
-                    <Tag color="orange">机房总电源XHMFASFA-350</Tag>
-                    <Tag color="gold">机房总电源XHMFASFA-284</Tag>
+                    <Tag color="magenta">XXXXX</Tag>
+                    <Tag color="red">gasga-210</Tag>
+                    <Tag color="volcano">gajslgj-315</Tag>
+                    <Tag color="orange">gaslgjak-350</Tag>
+                    <Tag color="gold">gjalsgkja-284</Tag>
                 </div>
             </div>
         );
@@ -171,32 +171,32 @@ export class Index extends Component {
                 <span className="close" onClick={this.closeEquipInfo}><Icon type="close"></Icon></span>
 
                 <div className="title">
-                    设备 #1
+                    标题 #1
                 </div>
                 <div>
-                    <Tag color="magenta">机房总电源XHMFASFA</Tag>
-                    <Tag color="red">机房总电源XHMFASFA-210</Tag>
-                    <Tag color="volcano">机房总电源XHMFASFA-315</Tag>
-                    <Tag color="orange">机房总电源XHMFASFA-350</Tag>
-                    <Tag color="gold">机房总电源XHMFASFA-284</Tag>
+                    <Tag color="magenta">45646</Tag>
+                    <Tag color="red">hash-210</Tag>
+                    <Tag color="volcano">jdss-315</Tag>
+                    <Tag color="orange">hhasas-350</Tag>
+                    <Tag color="gold">jhlasgj-284</Tag>
                 </div>
             </div>
         );
 
         const popContent = (
             <div className="panel">
-                <div className="panel-header">亚光高新产业园二号楼 <span className="close" onClick={this.closePop}><Icon
+                <div className="panel-header">坐标XXX <span className="close" onClick={this.closePop}><Icon
                     type="close"></Icon></span></div>
                 <div className="panel-body">
                     <div className="has-info" onClick={this.openRtuInfo}>
-                        RTU数量：3／4／7
+                        XXX数量：3／4／7
                         <span className="right-icon"><Icon type="right"></Icon></span>
                     </div>
                     <div className="has-info" onClick={this.openEquipInfo}>
-                        设备数量：3／4／7
+                        YYY数量：3／4／7
                         <span className="right-icon"><Icon type="right"></Icon></span>
                     </div>
-                    <p>注册日期：2018-02-27</p>
+                    <p>日期：2018-02-27</p>
                     <p>最后同步：2018-02-08 11:35</p>
                 </div>
                 <div className="panel-footer text-center">

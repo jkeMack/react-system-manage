@@ -16,9 +16,9 @@ export class Statistics extends Component {
 
         chart.setOption({
             title: [
-                {text: '1000', subtext: '站点总数',left:'15%',top:'40%',textStyle:{color:'#fff',fontSize:'30',fontWeight:'400'}},
-                {text: '500', subtext: 'RTU总数',left:'45%',top:'40%',textStyle:{color:'#fff',fontSize:'30',fontWeight:'400'}},
-                {text: '666', subtext: '设备总数',left:'75%',top:'40%',textStyle:{color:'#fff',fontSize:'30',fontWeight:'400'}},
+                {text: '1000', subtext: 'X总数',left:'15%',top:'40%',textStyle:{color:'#fff',fontSize:'30',fontWeight:'400'}},
+                {text: '500', subtext: 'XX总数',left:'45%',top:'40%',textStyle:{color:'#fff',fontSize:'30',fontWeight:'400'}},
+                {text: '666', subtext: 'XXX总数',left:'75%',top:'40%',textStyle:{color:'#fff',fontSize:'30',fontWeight:'400'}},
             ],
             legend: {
                 x: 'center',
@@ -36,7 +36,7 @@ export class Statistics extends Component {
             calculable: true,
             series: [
                 {
-                    name: '站点',
+                    name: 'X',
                     type: 'pie',
                     radius: ['40%', '45%'],
                     center: ['20%', '50%'],
@@ -60,7 +60,7 @@ export class Statistics extends Component {
                     ]
                 },
                 {
-                    name: 'RTU',
+                    name: 'XX',
                     type: 'pie',
                     radius: ['40%', '45%'],
                     center: ['50%', '50%'],
@@ -84,7 +84,7 @@ export class Statistics extends Component {
                     ]
                 },
                 {
-                    name: '设备',
+                    name: 'XXX',
                     type: 'pie',
                     radius: ['40%', '45%'],
                     center: ['80%', '50%'],
@@ -160,7 +160,7 @@ export class Statistics extends Component {
                 trigger: 'axis',
             },
             legend: {
-                data: ['站点', '设备', 'RTU'],
+                data: ['X', 'XX', 'XXX'],
                 textStyle: {color: '#8997aa'}
             },
             calculable: true,
@@ -184,7 +184,7 @@ export class Statistics extends Component {
             ],
             series: [
                 {
-                    name: '站点',
+                    name: 'X',
                     type: 'line',
                     stack: '总量',
                     symbolSize: 8,
@@ -199,7 +199,7 @@ export class Statistics extends Component {
                     data: [33, 60, 50, 94, 44, 58, 76]
                 },
                 {
-                    name: '设备',
+                    name: 'XX',
                     type: 'line',
                     stack: '总量',
                     symbolSize: 8,
@@ -214,7 +214,7 @@ export class Statistics extends Component {
                     data: [12, 34, 88, 66, 55, 33, 46]
                 },
                 {
-                    name: 'RTU',
+                    name: 'XXX',
                     type: 'line',
                     stack: '总量',
                     symbolSize: 8,
@@ -239,9 +239,9 @@ export class Statistics extends Component {
             calculable: true,
             legend: {
                 data: [
-                    {name: '站点', icon: 'circle'},
-                    {name: '设备', icon: 'circle'},
-                    {name: 'RTU', icon: 'circle'},
+                    {name: 'X', icon: 'circle'},
+                    {name: 'XX', icon: 'circle'},
+                    {name: 'XXX', icon: 'circle'},
                 ],
                 textStyle: {color: '#8997aa'}
             },
@@ -265,7 +265,7 @@ export class Statistics extends Component {
             ],
             series: [
                 {
-                    name: 'RTU',
+                    name: 'X',
                     type: 'bar',
                     itemStyle: {
                         normal: {
@@ -275,7 +275,7 @@ export class Statistics extends Component {
                     data: [55, 34, 68, 90, 44, 56, 70, 88, 24, 19, 33, 55]
                 },
                 {
-                    name: '站点',
+                    name: 'XX',
                     type: 'line',
                     itemStyle: {
                         normal: {
@@ -285,7 +285,7 @@ export class Statistics extends Component {
                     data: [90, 22, 55, 75, 88, 55, 66, 77, 16, 25, 26, 46]
                 },
                 {
-                    name: '设备',
+                    name: 'XXX',
                     type: 'line',
                     itemStyle: {
                         normal: {
