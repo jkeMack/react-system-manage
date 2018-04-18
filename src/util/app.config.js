@@ -9,6 +9,7 @@ export const AppConfig = {
         '/home/crud': 'CRUD示例',
         '/home/configForm': '配置表单',
         '/home/editor': '编辑器',
+        '/home/markdown': 'markdown编辑器',
     },
     menuConfig: [
         {

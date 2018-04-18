@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {message} from 'antd';
 import {Crud} from '../../common/crud/crud';
+import './curdDemo.less';
 
 export class CrudDemo extends Component {
 
@@ -83,7 +84,9 @@ export class CrudDemo extends Component {
         };
 
         return (
-            <Crud config={config} test={this.test}></Crud>
+            <div class="crud-demo">
+                <Crud config={config} test={this.test}></Crud>
+            </div>
         )
     }
 }
